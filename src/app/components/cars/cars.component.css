@@ -1,0 +1,8 @@
+.custom-bg {
+    background-color: #f8f9fa !important;
+}
+
+.custom-bg th,
+.custom-bg td {
+    background-color: #f8f9fa !important;
+}
