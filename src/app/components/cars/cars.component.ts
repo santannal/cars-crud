@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CarComponent, FormsModule, CommonModule],
   templateUrl: './cars.component.html',
-  styleUrl: './cars.component.css'
+  styleUrls: ['./cars.component.css']
 })
 export class CarsComponent {
   setCar: Car = {} as Car;

@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Car } from '../../Car';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-car',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './car.component.html',
-  styleUrl: './car.component.css'
+  styleUrls: ['./car.component.css']
 })
 export class CarComponent {
   @Input()
