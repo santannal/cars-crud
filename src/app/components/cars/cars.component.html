@@ -1,5 +1,5 @@
 <div class="container rounded bg-light">
-    <app-car></app-car>
+    <app-car [car]="setCar" (saveEmitter)="saveCar()"></app-car>
 
     <h3>Carros Cadastrados: </h3>
     <hr class="text-secondary">
@@ -15,20 +15,13 @@
             </tr>
         </thead>
         <tbody>
-            <td>1</td>
-            <td>Nome 1</td>
-            <td>Montadora Santanna</td>
-            <td>100</td>
-            <td>2010</td>
-            <td class="me-3">option</td>
-        </tbody>
-        <tbody>
-            <td>2</td>
-            <td>Nome 2</td>
-            <td>Montadora Santanna</td>
-            <td>200</td>
-            <td>2020</td>
-            <td class="me-3">option2</td>
+            <tr *ngFor="let car of cars">
+                <th scope="row">{{car.id}}</th>
+                <th>{{car.name}}</th>
+                <th>{{car.autoMaker}}</th>
+                <th>{{car.price}}</th>
+                <th>{{car.year}}</th>
+            </tr>
         </tbody>
     </table>
 </div>

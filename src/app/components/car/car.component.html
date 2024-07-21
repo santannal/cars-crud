@@ -1,14 +1,15 @@
 <div class="container">
     <h3>Cadastro de Carros:</h3>
 
-    <form>
+    <form #formCar="ngForm">
         <div class="container">
             <form>
                 <div class="container form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Nome:</label>
                     <div class="col-sm-10">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="name" aria-describedby="name">
+                            <input type="text" [(ngModel)]="car.name" class="form-control" name="name" id="name"
+                                aria-describedby="name">
                         </div>
                     </div>
                 </div>
@@ -16,7 +17,8 @@
                     <label for="automaker" class="col-sm-2 col-form-label">Montadora: </label>
                     <div class="col-sm-10">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="automaker" aria-describedby="automaker">
+                            <input type="text" [(ngModel)]="car.autoMaker" name="autoMaker" class="form-control"
+                                id="autoMaker" aria-describedby="automaker">
                         </div>
                     </div>
                 </div>
@@ -24,17 +26,19 @@
                     <label for="price" class="col-sm-2 col-form-label">Preço: </label>
                     <div class="col-sm-4">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="price" aria-describedby="price">
+                            <input type="number" [(ngModel)]="car.price" class="form-control" id="price"
+                                aria-describedby="price" name="price">
                         </div>
                     </div>
                     <label for="year" class="col-sm-2 col-form-label">Ano: </label>
                     <div class="col-sm-4">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="year" aria-describedby="year">
+                            <input type="number" [(ngModel)]="car.year" class="form-control" id="year"
+                                aria-describedby="year" name="year">
                         </div>
                     </div>
                 </div>
 
-                <button class="btn btn-primary mt-3">Salvar</button>
+                <button class="btn btn-primary mt-3" (click)="save()">Salvar</button>
             </form>
         </div>
