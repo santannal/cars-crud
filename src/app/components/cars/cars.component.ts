@@ -27,4 +27,9 @@ export class CarsComponent {
     this.isUpdate = false;
     this.setCar = {} as Car;
   }
+
+  update(car: Car) {
+    this.setCar = car;
+    this.isUpdate = true;
+  }
 }
