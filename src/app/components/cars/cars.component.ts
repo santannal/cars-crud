@@ -32,4 +32,9 @@ export class CarsComponent {
     this.setCar = car;
     this.isUpdate = true;
   }
+
+  exclude(car: Car) {
+    this.cars = this.cars.filter(c => c !== car);
+    this.cars.length + 1;
+  }
 }
